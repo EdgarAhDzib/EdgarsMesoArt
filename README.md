@@ -1,5 +1,5 @@
 # EdgarsMesoArt
-##edgarsmesoart.com
+## edgarsmesoart.com
 
 A PHP application that displays pages by GET requests, to prepare HTML content by either include methods or MySQL queries.
 
