@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image:url(mesoimages/tepantitla.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+}
+.imgTopAlign {
+		vertical-align: top;
+		}
+	
+.pronounce {
+	text-decoration:underline;
+	font-weight: bold;
+	background-color: #ffc2b3;
+	text-decoration-color: #2b882b;
+	-moz-text-decoration-color: #2b882b;
+}
+
+.thumbnail {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
