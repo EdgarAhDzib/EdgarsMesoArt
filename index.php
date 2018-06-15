@@ -1,10 +1,11 @@
 <?php
-require_once '../above/config_mesoam.php';
+require_once '../above/config_meso.php';
 $title_html = "Edgar's Mesoamerican Art Page";
 $head_title = "Edgar's Mesoamerican Art Page";
 $meta_desc = "";
 $front_page = false;
 $page = false;
+$page_array = array('index','bib','faq','news','cultures','deity','special');
 
 if (isset($_GET['p'])) {
 	$page = $_GET['p'];
@@ -15,7 +16,8 @@ if (isset($_GET['p'])) {
 	$front_page = true;
 	$page = false;
 }
-if (!$stmt) {
+$results = $stmt->fetch(PDO::FETCH_OBJ);
+if (!$results && !in_array($page,$page_array)) {
 	$front_page = true;
 	$page = false;
 } else {
@@ -49,9 +51,9 @@ if (!$stmt) {
 <?php
 	require_once 'header.html';
 	if ($front_page) {
-		require_once 'front.html';
+		require_once '../above/front.html';
 	} else if ($page) {
-		
+
 		switch ($page) {
 			case 'index':
 				require_once '../above/front.html';
@@ -86,7 +88,7 @@ if (!$stmt) {
 		}
 
 	} else {
-		require_once 'front.html';
+		require_once '../above/front.html';
 	}
 	require_once 'footer.php';
 ?>
